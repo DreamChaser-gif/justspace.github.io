@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+/* wp2284580-spacex-wallpapers.jpg */
+
+body {
+    background-image: url(wp2284580-spacex-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Oswald';
+}
+
+/* .active1 {
+   background-image: url(star.jpg);
+} */
+
+.active1 {
+   background-image: url(falcon_9.jpg);
+}
+.active2 {
+  background-image: url(fh.jpg);
+}
+
+.active3 {
+  background-image: url(star.jpg);
+
+}
+
+.active4 {
+  background-color: url(slink.jpg);
+}
+
+.custom-button {
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px #000;
+}
+
+#dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* .w3-dropdown-content{
+display: flex;
+flex-wrap: wrap;
+cursor: pointer;
+} */
+
+
+.w3-dropdown-content{
+display: block;
+flex-direction: column;
+}
+
+#dropdown-content {
+   display: none;
+}
+
+
+
+
+nav {
+  background-color: transparent; /* set the background color */
+  height: 100px; /* set the height of the navbar */
+  display: flex; /* center the elements inside the navbar */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.nav-button {
+  position: relative; /* added to allow pseudo element */
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  font-family: 'Oswald';
+  z-index: 1; /* added to make text appear on top of pseudo element */
+}
+
+.nav-button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* adjust the height of the line */
+  background-color: #ddd1d1;
+  transition: width 0.5s ease;
+  z-index: 0; /* added to make pseudo element appear behind text */
+}
+
+.nav-button:hover:before {
+  width: 100%;
+}
+
+
+
+nav .logo {
+  width: 100px; /* set the width of the logo */
+  
+}
+
+nav ul {
+  list-style: none; /* remove bullet points */
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+  display: flex; /* align the list items horizontally */
+  align-items: center; /* center the font vertically */
+  
+}
+
+nav ul li {
+  padding: 0 20px; /* add padding to each list item */
+}
+
+nav a {
+  color: #fff; /* set the text color */
+  text-decoration: none; /* remove underline */
+  font-size: 16px; /* set the font size */
+}
+
+
+.front-picture {
+  background-image: url(path/to/image.jpg); /* set the background image */
+  background-size: cover; /* cover the entire element */
+  height: 600px; /* set the height of the element */
+  width: 100%; /* make the element take the full width of the screen */
+}
+
+
+.menu-toggle {
+display: flex;
+flex-direction: column;
+height: 20px;
+justify-content: space-between;
+background-color: transparent;
+position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  left: -5px;
+  top: -3px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+
+/* humburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+
+  
+}
+
+.menu-toggle span:nth-child(3) {
+  transform-origin: 0 0;
+
+  
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 0;
+
+  
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+  transform: rotate(45deg) translate(-2px, -2px);
+
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+  scale: 0;
+  opacity: 0;
+
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(4){
+  transform: rotate(-45deg) translate(-2px, -2px);
+
+}
+
+.active {
+  display: flex;
+}
+
+
+
+
+.hide1 {
+  display: none;
+
+  background-color: rgba(255, 255, 255, 0.2); /* transparent white background */
+  border-radius: 10px; /* round the corners */
+  box-shadow: 2px 2px 10px #000; /* add a drop shadow */
+  padding: 20px; /* add some padding to the text */
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50%;
+  margin:auto;
+
+  
+}
+
+.hide2 {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.2); /* transparent white background */
+  border-radius: 10px; /* round the corners */
+  box-shadow: 2px 2px 10px #000; /* add a drop shadow */
+  padding: 20px; /* add some padding to the text */
+  width: 50%; /* set the width to 50% of the parent element */
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  left: 10px; /* position the element on the left side of the parent element */
+  top: 50%; /* position the element in the vertical center of the parent element */
+  transform: translateY(-50%); /* move the element up by 50% of its own height to center it vertically */
+}
+
+
+.hide3 {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.2); /* transparent white background */
+  border-radius: 10px; /* round the corners */
+  box-shadow: 2px 2px 10px #000; /* add a drop shadow */
+  padding: 20px; /* add some padding to the text */
+  width: 50%; /* set the width to 50% of the parent element */
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 10px; /* position the element on the right side of the parent element */
+  top: 50%; /* position the element in the vertical center of the parent element */
+  transform: translateY(-50%); /* move the element up by 50% of its own height to center it vertically */
+}
+
+
+.hide4 {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.2); /* transparent white background */
+  border-radius: 10px; /* round the corners */
+  box-shadow: 2px 2px 10px #000; /* add a drop shadow */
+  padding: 20px; /* add some padding to the text */
+  width: 50%; /* set the width to 50% of the parent element */
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  left: 50%; /* position the element in the horizontal center of the parent element */
+  bottom: 20px; /* position the element on the bottom of the parent element */
+  transform: translateX(-50%); /* move the element left by 50% of its own width to center it horizontally */
+}
+
+
+
+/* responsif */
+
+/* ukuran tablet */
+@media screen and (max-width:768px ) {
+  .nav-BUTTON {
+    width: 0%;
+    justify-content: space-between;
+    left: 10%;
+  }
+  nav .logo {
+    width: 100px; /* set the width of the logo */
+  }
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 576px ) {
+  .nav-button {
+    display: none;
+    justify-content: center;
+  }
+  nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100px;
+  }
+} 
+

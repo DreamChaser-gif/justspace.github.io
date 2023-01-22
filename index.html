@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacex</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+
+        <div class="logo">
+            <img src="spacex-logo-black-and-white.png" width="200%">
+        </div>
+
+        <!-- <ul>
+            <li><a href="">FLACON 9</a></li>
+            <li><a href="falconheavy.html">FALCON HEAVY</a></li>
+            <li><a href="">DARGON</a></li>
+            <li><a href="">STARSHIP</a></li>
+        </ul> -->
+
+        <div>
+            <button id="falcon9" class="nav-button" onclick="navigateTo('falcon')  ">FALCON 9</button>
+            <button id="falconheavy" class="nav-button" onclick="navigateTo('fh')">FALCON HEAVY</button>
+            <button id="starship" class="nav-button" onclick="navigateTo('star')">STARSHIP</button>
+            <button id="starlink" class="nav-button" onclick="navigateTo('link')">STARLINK</button>
+        </div>
+
+        
+        <div class="w3-dropdown-hover" id="more-dropdown">
+            <button class="w3-button"
+                style="font-family: 'Oswald', sans-serif !important; background-color: transparent; color: white;">MORE</button>
+                <div class="w3-dropdown-content w3-bar-block w3-hide" id="dropdown-content">
+                    <button id="falcon9" class="nav-button w3-button"  onclick="navigateTo('falcon');document.body.classList.add('active1')">FALCON 9</button>
+                    <button id="falconheavy" class="nav-button w3-button" onclick="navigateTo('fh');document.body.classList.add('active2')">FALCON HEAVY</button>
+                    <button id="starship" class="nav-button w3-button" onclick="navigateTo('star');document.body.classList.add('active3')">STARSHIP</button>
+                    <button id="slink" class="nav-button w3-button"  onclick="navigateTo('link');document.body.classList.add('active4')">STARLINK</button>
+                </div>
+        </div>
+    </div>
+
+
+
+        <!-- <div class="menu-toggle">
+            <input type="checkbox" id="menu-toggle-input" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>     -->
+
+    </nav>
+
+    <div id="falcon9text" class="hide1">
+        <h1>Falcon 9</h1>
+        <p>Falcon 9 is a partially reusable rocket designed and manufactured by SpaceX for the reliable and safe
+            transport
+            of satellites and the Dragon spacecraft into orbit.</p>
+    </div>
+
+    <div id="falconheavytext" class="hide2">
+        <h1>Falcon Heavy</h1>
+        <p>Falcon Heavy is a partially reusable heavy-lift launch vehicle designed and manufactured by SpaceX. It is the
+            most powerful operational rocket in the world by a factor of two.</p>
+    </div>
+
+    <div id="starshiptext" class="hide3">
+        <h1>Starship</h1>
+        <p>Starship is a fully reusable spacecraft being developed by SpaceX for human spaceflight and transportation of
+            payloads to Earth orbit and beyond. It is the company's long-term goal for interplanetary travel.</p>
+    </div>
+
+    <div id="starlinktext" class="hide4">
+        <h1>Starlink</h1>
+        <p>Starlink is a satellite internet constellation being constructed by SpaceX. It will consist of thousands of
+            mass-produced small satellites in low Earth orbit, working in combination with ground transceivers.</p>
+    </div>
+
+
+
+    <script>
+
+    document.getElementById("more-dropdown").addEventListener("click", function () {
+        var x = document.getElementById("dropdown-content");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    });
+
+
+    // document.getElementById("falcon9").addEventListener("click", function () {
+    //     this.classList.toggle("active1");
+    // });
+    // document.getElementById("falconheavy").addEventListener("click", function () {
+    //     this.classList.toggle("active2");
+    // });
+    // document.getElementById("starship").addEventListener("click", function () {
+    //     this.classList.toggle("active3");
+    // });
+    // document.getElementById("starlink").addEventListener("click", function () {
+    //     this.classList.toggle("active4");
+    // });
+
+    function navigateTo(id) {
+        if (id === 'falcon') {
+            document.getElementById("falcon9text").style.display = "block";
+            document.getElementById("falconheavytext").style.display = "none";
+            document.getElementById("starshiptext").style.display = "none";
+            document.getElementById("starlinktext").style.display = "none";
+        }
+        else if (id === 'fh') {
+            document.getElementById("falcon9text").style.display = "none";
+            document.getElementById("falconheavytext").style.display = "block";
+            document.getElementById("starshiptext").style.display = "none";
+            document.getElementById("starlinktext").style.display = "none";
+        }
+
+        else if (id === 'star') {
+            document.getElementById("falcon9text").style.display = "none";
+            document.getElementById("falconheavytext").style.display = "none";
+            document.getElementById("starshiptext").style.display = "block";
+            document.getElementById("starlinktext").style.display = "none";
+        }
+        else if (id === 'link') {
+            document.getElementById("falcon9text").style.display = "none";
+            document.getElementById("falconheavytext").style.display = "none";
+            document.getElementById("starshiptext").style.display = "none";
+            document.getElementById("starlinktext").style.display = "block";
+        }
+        
+    }
+
+
+        // Get a reference to the buttons
+        const button1 = document.getElementById("falcon9");
+        const button2 = document.getElementById("falconheavy");
+        const button3 = document.getElementById("starship");
+        const button4 = document.getElementById("starlink");
+        const displayText = document.getElementById("display-text");
+
+        // Add event listeners to the buttons
+        button1.addEventListener("click", function () {
+            document.body.style.backgroundImage = "url(falcon_9.jpg)";
+            document.getElementById("falcon9text").style.display = "block";
+            document.getElementById("falconheavytext").style.display = "none";
+            document.getElementById("starshiptext").style.display = "none";
+            document.getElementById("starlinktext").style.display = "none";
+        });
+
+        button2.addEventListener("click", function () {
+            document.body.style.backgroundImage = "url(fh.jpg)";
+            document.getElementById("falcon9text").style.display = "none";
+            document.getElementById("falconheavytext").style.display = "block";
+            document.getElementById("starshiptext").style.display = "none";
+            document.getElementById("starlinktext").style.display = "none";
+        });
+
+        button3.addEventListener("click", function () {
+            document.body.style.backgroundImage = "url(star.jpg)";
+            document.getElementById("falcon9text").style.display = "none";
+            document.getElementById("falconheavytext").style.display = "none";
+            document.getElementById("starshiptext").style.display = "block";
+            document.getElementById("starlinktext").style.display = "none";
+        });
+
+        button4.addEventListener("click", function () {
+            document.body.style.backgroundImage = "url(slink.jpg)";
+            document.getElementById("falcon9text").style.display = "none";
+            document.getElementById("falconheavytext").style.display = "none";
+            document.getElementById("starshiptext").style.display = "none";
+            document.getElementById("starlinktext").style.display = "block";
+
+
+
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
